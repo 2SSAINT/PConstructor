@@ -1,0 +1,159 @@
+{
+  "catalog":[
+  {
+    "component": "mother_board",
+    "models": [
+      {
+        "name" : "GIGABYTE H410M S2 V2",
+        "chipset" : "Intel H470",
+        "formfact" : "Micro-ATX",
+        "socket" : "LGA 1200",
+        "ram_slots" : 2,
+        "ram_type" : "DDR4",
+        "max_ram_freq" : 2133,
+        "sata_ports" : 4,
+        "m2_connects" : 1,
+        "pcie_x16" : 1,
+        "pcie_x8" : 0,
+        "pcie_x4" : 0,
+        "pcie_x1" : 2,
+        "vers_pcie" : "3.0",
+        "pins" : 24,
+        "tdp" : 50
+      }
+      ]
+    },
+    {
+      "component" : "CPU",
+      "models": [
+        {
+          "name" : "Intel Core i3-10100F",
+          "socket" : "LGA 1200",
+          "cores" : 4,
+          "streams" : 8,
+          "frequency" : 3600,
+          "accel" : 4300,
+          "casheL1" : "256 КБ",
+          "casheL2" : "1 МБ",
+          "casheL3" : "6 МБ",
+          "tdp" : 65,
+          "max_temp" : 100,
+          "graphics" : false,
+          "mem_type" : "DDR4",
+          "min_mem_freq" : 1600,
+          "pcie_vers" : 3.0,
+          "pcie_lines" : 16
+        }
+      ]
+    },
+    {
+      "component" : "RAM",
+      "models": [
+        {
+          "name" : "Patriot Signature Line [PSD48G266681] 8 ГБ",
+          "type" : "DDR4",
+          "freq" : 2666,
+          "memory" : 8,
+          "timings" : "19-19-19-43",
+          "tdp" : 7
+        }
+      ]
+    },
+    {
+      "component" : "Graphics Card",
+      "models": [
+        {
+          "name" : "MSI GeForce GT 730 [N730K-4GD3/OCV1]",
+          "gmemory" : 4,
+          "gmem_type" : "GDDR3",
+          "lenght" : 148,
+          "interface" : "PCI-E 16x",
+          "corefreq" : "",
+          "membus" : "64 bit",
+          "maxtemp" : "",
+          "powerconnect" : "",
+          "tdp" : 23
+        }
+      ]
+    },
+    {
+      "component" : "Cooler",
+      "models": [
+        {
+          "name" : "AeroCool BAS",
+          "socket" :[
+            "LGA 1200",
+            "LGA 1151-v2",
+            "LGA 1151",
+            "LGA 1156",
+            "LGA 1150",
+            "LGA 1155"
+          ],
+          "power_dissipation" : 100,
+          "hight" : 63,
+          "tdp" : 5
+        }
+      ]
+    },
+    {
+      "component" : "HDD",
+      "models": [
+        {
+          "name" : "Seagate 7200 BarraCuda [ST1000DM010]",
+          "memory" : "1 ТБ",
+          "rpm" : 7200,
+          "cashe" : "64 МБ",
+          "size" : 3.5,
+          "tdp" : 12
+        }
+      ]
+    },
+    {
+      "component" : "SSD",
+      "models": [
+        {
+          "name" : "Crucial BX500 [CT480BX500SSD1]",
+          "memory" : "480 ГБ",
+          "reading" : "540 Мбайт/сек",
+          "recording" : "500 Мбайт/сек",
+          "tdp" : 12
+        }
+      ]
+    },
+    {
+      "component" : "SSD M.2",
+      "models": [
+        {
+          "name" : "Kingston A400 [SA400M8/120G]",
+          "memory" : "120 ГБ",
+          "reading" : "500 Мбайт/сек",
+          "recording" : "320 Мбайт/сек",
+          "key" : "B & M"
+        }
+      ]
+    },
+    {
+      "component" : "Case",
+      "models": [
+        {
+          "name" : "AeroCool CS-103 [CS-103-S-BK-v1] ",
+          "formfact" : "Micro-ATX",
+          "case_type" : "Mini-Tower",
+          "max_lenght_graph_card" : 322,
+          "max_hight_cooler" : 156,
+          "media_slots" : ""
+        }
+      ]
+    },
+    {
+      "component" : "Power Unit",
+      "models": [
+        {
+          "name" : "Aerocool VX PLUS 350W [VX-350 PLUS]",
+          "power" : 350,
+          "connectors_for_devices" : " "
+        }
+      ]
+    },
+  ]
+}
