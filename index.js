@@ -38,6 +38,7 @@ module.exports = {
     if (con.catalog[4].models[col].power_dissipation < con.catalog[1].models[cpu].tdp)
     str2 = 'Мощности кулера недостаточно для отвода тепла, выделяемого процессором';
     if (str1 != "" && str2 != "")
+    // \n НЕ РАБОТАЕТ
     return str1 + '\n' + str2;
     else {
       if (str1 != "") return str1;
@@ -49,5 +50,25 @@ module.exports = {
   case : function (m,c) {
     if(con.catalog[8].models[c].formfact != con.catalog[0].models[m].formfact)
     console.log('Корпус и материнская плата несовместимы');
+  },
+  power_unit : function(p, m, cpu, r, g, col, h, s){
+    var temp = 0, j = 0;
+    var mas = [m, cpu, r, g, col];
+    for (var i = 0; i < 5; i++){
+      temp += con.catalog[i].models[mas[j]].tdp;
+      j++;
+    }
+    // ниже, если ssd или hdd нет, то в функцию в качестве параметра передается -1
+    if (h >= 0) {
+      if (s == -1)
+      temp += con.catalog[5].models[h].tdp;
+      else temp += con.catalog[5].models[h].tdp + con.catalog[6].models[s].tdp;
+    }
+    else {
+      if (s >= 0)
+      temp += con.catalog[6].models[s].tdp;
+    }
+    if (con.catalog[9].models[p].power < temp)
+    return 'Мощности блока питания не хватает';
   }
 }
