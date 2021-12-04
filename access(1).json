@@ -1,0 +1,371 @@
+{
+  "catalog":[
+  {
+    "component": "mother_board",
+    "models": [
+      {
+        "name" : "GIGABYTE H410M S2 V2",
+        "chipset" : "Intel H470",
+        "formfact" : "Micro-ATX",
+        "socket" : "LGA 1200",
+        "ram_slots" : 2,
+        "ram_type" : "DDR4",
+        "max_ram_freq" : 2933,
+        "sata_ports" : 4,
+        "m2_connects" : 1,
+        "pcie_x16" : 1,
+        "pcie_x8" : 0,
+        "pcie_x4" : 0,
+        "pcie_x1" : 2,
+        "vers_pcie" : "3.0",
+        "pins" : 24,
+        "tdp" : 50
+      },
+      {
+        "name" : "MSI A68HM-E33 V2",
+        "chipset" : "AMD A68H",
+        "formfact" : "Micro-ATX",
+        "socket" : "FM2+",
+        "ram_slots" : 2,
+        "ram_type" : "DDR3",
+        "max_ram_freq" : 2133,
+        "sata_ports" : 4,
+        "m2_connects" : 0,
+        "pcie_x16" : 1,
+        "pcie_x8" : 0,
+        "pcie_x4" : 0,
+        "pcie_x1" : 1,
+        "vers_pcie" : "3.0",
+        "pins" : 24,
+        "tdp" : 50
+      },
+      {
+        "name" : "MSI A320M-A PRO",
+        "chipset" : "AMD A320",
+        "formfact" : "Micro-ATX",
+        "socket" : "AM4",
+        "ram_slots" : 2,
+        "ram_type" : "DDR4",
+        "max_ram_freq" : 3200,
+        "sata_ports" : 4,
+        "m2_connects" : 0,
+        "pcie_x16" : 1,
+        "pcie_x8" : 0,
+        "pcie_x4" : 0,
+        "pcie_x1" : 1,
+        "vers_pcie" : "3.0",
+        "pins" : 24,
+        "tdp" : 50
+      }
+      ]
+    },
+    {
+      "component" : "CPU",
+      "models": [
+        {
+          "name" : "Intel Core i3-10100",
+          "socket" : "LGA 1200",
+          "cores" : 4,
+          "streams" : 8,
+          "frequency" : 3600,
+          "accel" : 4300,
+          "casheL1" : "256 КБ",
+          "casheL2" : "1 МБ",
+          "casheL3" : "6 МБ",
+          "tdp" : 65,
+          "max_temp" : 100,
+          "graphics" : true,
+          "mem_type" : "DDR4",
+          "max_mem_freq" : 2666,
+          "pcie_vers" : 3.0,
+          "pcie_lines" : 16,
+        },
+        {
+          "name" : "AMD Athlon X4 840",
+          "socket" : "FM2+",
+          "cores" : 4,
+          "streams" : 4,
+          "frequency" : 3100,
+          "accel" : 3800,
+          "casheL1" : "256 КБ",
+          "casheL2" : "4 МБ",
+          "casheL3" : "N|A",
+          "tdp" : 65,
+          "max_temp" : 71,
+          "graphics" : false,
+          "mem_type" : "DDR3",
+          "min_mem_freq" : 2133,
+          "pcie_vers" : 3.0,
+          "pcie_lines" : 16,
+        },
+        {
+          "name" : "AMD PRO A12-9800",
+          "socket" : "LGA 1200",
+          "cores" : 4,
+          "streams" : 4,
+          "frequency" : 3800,
+          "accel" : 4200,
+          "casheL1" : "320 КБ",
+          "casheL2" : "2 МБ",
+          "casheL3" : "N|A",
+          "tdp" : 65,
+          "max_temp" : 90,
+          "graphics" : true,
+          "mem_type" : "DDR4",
+          "max_mem_freq" : 2400,
+          "pcie_vers" : 3.0,
+          "pcie_lines" : 8,
+        }
+      ]
+    },
+    {
+      "component" : "RAM",
+      "models": [
+        {
+          "name" : "Patriot Signature Line [PSD48G266681] 8 ГБ",
+          "type" : "DDR4",
+          "freq" : 2666,
+          "memory" : 8,
+          "timings" : "19-19-19-43",
+          "tdp" : 7
+        },
+        {
+          "name" : "AMD Radeon R5 Entertainment Series [R532G1601U1S-U] 2 ГБ",
+          "type" : "DDR3",
+          "freq" : 1600,
+          "memory" : 2,
+          "timings" : "11-11-11-28",
+          "tdp" : 7
+        },
+        {
+          "name" : "Kingston FURY Beast Black [KF548C38BBK2-32] 32 ГБ",
+          "type" : "DDR5",
+          "freq" : 4800,
+          "memory" : 32,
+          "timings" : "38-38-38 ",
+          "tdp" : 7
+        }
+      ]
+    },
+    {
+      "component" : "Graphics Card",
+      "models": [
+        {
+          "name" : "MSI GeForce GT 730 [N730K-4GD3/OCV1]",
+          "gmemory" : 4,
+          "gmem_type" : "GDDR3",
+          "lenght" : 148,
+          "interface" : "PCI-E 16x",
+          "corefreq" : "",
+          "membus" : "64 bit",
+          "maxtemp" : "",
+          "powerconnect" : "",
+          "tdp" : 23
+        },
+        {
+          "name" : "ZOTAC GAMING GeForce RTX 3090 ArcticStorm [ZT-A30900Q-30P]",
+          "gmemory" : 24,
+          "gmem_type" : "GDDR6X",
+          "lenght" : 301.3,
+          "interface" : "PCI-E 16x",
+          "corefreq" : "",
+          "membus" : "384 bit",
+          "maxtemp" : "",
+          "powerconnect" : "",
+          "tdp" : 350
+        },
+        {
+          "name" : "ASUS GeForce GTX 1050 Ti Phoenix [PH-GTX1050TI-4G]",
+          "gmemory" : 4,
+          "gmem_type" : "GDDR5",
+          "lenght" : 192,
+          "interface" : "PCI-E 16x",
+          "corefreq" : "",
+          "membus" : "128 bit",
+          "maxtemp" : "",
+          "powerconnect" : "",
+          "tdp" : 75
+        }
+      ]
+    },
+    {
+      "component" : "Cooler",
+      "models": [
+        {
+          "name" : "AeroCool BAS",
+          "socket" :[
+            "LGA 1200",
+            "LGA 1151-v2",
+            "LGA 1151",
+            "LGA 1156",
+            "LGA 1150",
+            "LGA 1155"
+          ],
+          "power_dissipation" : 100,
+          "hight" : 63,
+          "tdp" : 5
+        },
+        {
+          "name" : "CoolerMaster A30 [RH-A30-25FK-R1]",
+          "socket" :[
+            "AM4",
+            "AM3",
+            "FM2+",
+            "FM2",
+            "FM1",
+            "AM3+",
+            "AM2",
+            "AM2+"
+          ],
+          "power_dissipation" : 65,
+          "hight" : 48,
+          "tdp" : 5
+        },
+        {
+          "name" : "CoolerMaster Z30 [RH-Z30-25FK-R1]",
+          "socket" :[
+            "LGA 1200",
+            "LGA 1151-v2",
+            "LGA 1151",
+            "LGA 1156",
+            "LGA 1150",
+            "LGA 1155"
+          ],
+          "power_dissipation" : 65,
+          "hight" : 50,
+          "tdp" : 5
+        }
+      ]
+    },
+    {
+      "component" : "HDD",
+      "models": [
+        {
+          "name" : "Seagate 7200 BarraCuda [ST1000DM010]",
+          "memory" : "1 ТБ",
+          "rpm" : 7200,
+          "cashe" : "64 МБ",
+          "size" : 3.5,
+          "tdp" : 12
+        },
+        {
+          "name" : "WD Blue [WD5000AZRZ]",
+          "memory" : "500 ГБ",
+          "rpm" : 5400,
+          "cashe" : "64 МБ",
+          "size" : 3.5,
+          "tdp" : 12
+        },
+        {
+          "name" : "Toshiba P300 [HDWD110UZSVA]",
+          "memory" : "1 ТБ",
+          "rpm" : 7200,
+          "cashe" : "64 МБ",
+          "size" : 3.5,
+          "tdp" : 12
+        }
+      ]
+    },
+    {
+      "component" : "SSD",
+      "models": [
+        {
+          "name" : "Crucial BX500 [CT480BX500SSD1]",
+          "memory" : "480 ГБ",
+          "reading" : "540 Мбайт/сек",
+          "recording" : "500 Мбайт/сек",
+          "tdp" : 12
+        },
+        {
+          "name" : "AMD Radeon R5 Series [R5SL120G]",
+          "memory" : "120 ГБ",
+          "reading" : "520 Мбайт/сек",
+          "recording" : "290 Мбайт/сек",
+          "tdp" : 12
+        },
+        {
+          "name" : "Apacer AS350 PANTHER [95.DB2A0.P100C]",
+          "memory" : "256 ГБ",
+          "reading" : "560 Мбайт/сек",
+          "recording" : "540 Мбайт/сек",
+          "tdp" : 12
+        }
+      ]
+    },
+    {
+      "component" : "SSD M.2",
+      "models": [
+        {
+          "name" : "Kingston A400 [SA400M8/120G]",
+          "memory" : "120 ГБ",
+          "reading" : "500 Мбайт/сек",
+          "recording" : "320 Мбайт/сек",
+          "key" : "B & M"
+        },
+        {
+          "name" : "WD Green [WDS240G2G0B]",
+          "memory" : "240 ГБ",
+          "reading" : "540 Мбайт/сек",
+          "recording" : "465 Мбайт/сек",
+          "key" : "B & M"
+        },
+        {
+          "name" : "Samsung 980 [MZ-V8V500BW]",
+          "memory" : "500 ГБ",
+          "reading" : "3100 Мбайт/сек",
+          "recording" : "2600 Мбайт/сек",
+          "key" : "M"
+        }
+      ]
+    },
+    {
+      "component" : "Case",
+      "models": [
+        {
+          "name" : "AeroCool CS-103 [CS-103-S-BK-v1]",
+          "formfact" : "Micro-ATX",
+          "case_type" : "Mini-Tower",
+          "max_lenght_graph_card" : 322,
+          "max_hight_cooler" : 156,
+          "media_slots" : ""
+        },
+        {
+          "name" : "DEEPCOOL MATREXX 30",
+          "formfact" : "Micro-ATX",
+          "case_type" : "Mini-Tower",
+          "max_lenght_graph_card" : 250,
+          "max_hight_cooler" : 151,
+          "media_slots" : ""
+        },
+        {
+          "name" : "AeroCool Aero One Mini Frost",
+          "formfact" : "Micro-ATX",
+          "case_type" : "Mini-Tower",
+          "max_lenght_graph_card" : 327,
+          "max_hight_cooler" : 161,
+          "media_slots" : ""
+        }
+      ]
+    },
+    {
+      "component" : "Power Unit",
+      "models": [
+        {
+          "name" : "Aerocool VX PLUS 350W [VX-350 PLUS]",
+          "power" : 350,
+          "connectors_for_devices" : " "
+        },
+        {
+          "name" : "Super Flower Leadex Platinum 2000W",
+          "power" : 2000;
+          "connectors_for_devices" : " "
+        },
+        {
+          "name" : "Cougar STX650",
+          "power" : 650;
+          "connectors_for_devices" : " "
+        }
+      ]
+    },
+  ]
+}
