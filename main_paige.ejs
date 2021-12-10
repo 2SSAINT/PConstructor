@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="shortcut icon" href="data/icon.ico"/>
+  <style>
+  p {
+   font-size:24px;
+  }
+  input {
+   font-size:24px;
+  }
+  select {
+    width: 500px; /* Ширина списка в пикселах */
+    height: 75px;
+  }
+  body
+  {
+    background: #c7b39b url(data/BG.jpg); /* Цвет фона и путь к файлу */
+  }
+  .topnav { /*Верхняя панель*/
+  overflow: hidden;
+  background-color: #333;
+  }
+
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="topnav">
+  <a class="active" href="#">Главная страница</a>
+  <a href="#">Проверка совместимости</a>
+  <a href="#">Характеристика комплектующих</a>
+  <a href="#">О проекте</a>
+  </div>
+
+  <center><h1>Выберите комплектующие для ПК:</h1>
+  <p>Материнская плата:</p>
+
+  <form name="Choosen" method="post" onsubmit="alert('submit!')">
+    <p><select size="3" multiple name="MB">
+      <option disabled>Список материнских плат</option>
+      <% if(dat) {%>
+        <%dat[0].models.forEach((item, i) => {%>
+          <option value=<%=i%>><%=dat[0].models[i].name%></option>
+        <%})%>
+      <%}%>
+    </select></p>
+
+    <p>Процессор:</p>
+      <p><select size="3" multiple name="CPU">
+       <option disabled>Список процессоров</option>
+       <% if(dat) {%>
+         <%dat[1].models.forEach((item, i) => {%>
+           <option value=<%=i%>><%=dat[1].models[i].name%></option>
+         <%})%>
+       <%}%>
+      </select></p>
+
+     <p>ОЗУ:</p>
+       <p><select size="3" multiple name="RAM">
+        <option disabled>Список ОЗУ</option>
+        <% if(dat) {%>
+          <%dat[2].models.forEach((item, i) => {%>
+            <option value=<%=i%>><%=dat[2].models[i].name%></option>
+          <%})%>
+        <%}%>
+       </select></p>
+
+      <p>Видеокарта:</p>
+        <p><select size="3" multiple name="GC">
+         <option disabled>Список видеокарт</option>
+         <% if(dat) {%>
+           <%dat[3].models.forEach((item, i) => {%>
+             <option value=<%=i%>><%=dat[3].models[i].name%></option>
+           <%})%>
+         <%}%>
+        </select></p>
+
+       <p>Кулер:</p>
+         <p><select size="3" multiple name="COOL">
+          <option disabled>Список кулеров</option>
+          <% if(dat) {%>
+            <%dat[4].models.forEach((item, i) => {%>
+              <option value=<%=i%>><%=dat[4].models[i].name%></option>
+            <%})%>
+          <%}%>
+         </select></p>
+
+        <p>Жесткий диск:</p>
+          <p><select size="3" multiple name="HDD">
+           <option disabled>Список жестких дисков</option>
+           <option value=-1>Нет</option>
+           <% if(dat) {%>
+             <%dat[5].models.forEach((item, i) => {%>
+               <option value=<%=i%>><%=dat[5].models[i].name%></option>
+             <%})%>
+           <%}%>
+          </select></p>
+
+         <p>SSD SATA:</p>
+           <p><select size="3" multiple name="SSDS">
+            <option disabled>Список SATA SSD</option>
+            <option value=-1>Нет</option>
+            <% if(dat) {%>
+              <%dat[6].models.forEach((item, i) => {%>
+                <option value=<%=i%>><%=dat[6].models[i].name%></option>
+              <%})%>
+            <%}%>
+           </select></p>
+
+          <p>SSD M.2:</p>
+            <p><select size="3" multiple name="SM2">
+             <option disabled>Список SATA M.2</option>
+             <option value=-1>Нет</option>
+             <% if(dat) {%>
+               <%dat[7].models.forEach((item, i) => {%>
+                 <option value=<%=i%>><%=dat[7].models[i].name%></option>
+               <%})%>
+             <%}%>
+            </select></p>
+
+           <p>Корпус:</p>
+             <p><select size="3" multiple name="CASE">
+              <option disabled>Список корпусов</option>
+              <% if(dat) {%>
+                <%dat[8].models.forEach((item, i) => {%>
+                  <option value=<%=i%>><%=dat[8].models[i].name%></option>
+                <%})%>
+              <%}%>
+             </select></p>
+
+            <p>Блок Питания:</p>
+              <p><select size="3" multiple name="PU">
+               <option disabled>Список блоков питания</option>
+               <% if(dat) {%>
+                 <%dat[9].models.forEach((item, i) => {%>
+                   <option value=<%=i%>><%=dat[9].models[i].name%></option>
+                 <%})%>
+               <%}%>
+              </select></p>
+
+              <botton onclick="Enter();"><input type="submit"value="Проверить"></botton>
+             </form>
+
+ </body>
+ </html>
