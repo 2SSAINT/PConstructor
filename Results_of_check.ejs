@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="shortcut icon" href="data/icon.ico"/>
+  <style>
+  p {
+   font-size:24px;
+  }
+  input {
+   font-size:24px;
+  }
+  select {
+    width: 500px; /* Ширина списка в пикселах */
+    height: 75px;
+  }
+  body
+  {
+    background: #c7b39b url(data/BG.jpg); /* Цвет фона и путь к файлу */
+  }
+  .topnav { /*Верхняя панель*/
+  overflow: hidden;
+  background-color: #333;
+  }
+
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="topnav">
+  <a href="/">Главная страница</a>
+  <a class="active"href="#">Проверка совместимости</a>
+  <a href="catalog">Характеристика комплектующих</a>
+  <a href="#">О проекте</a>
+  </div>
+  <center>
+  <%if (j == 1){%>
+  <h1>Все комплектующие совместимы</h1><%}%>
+
+  <%if (j == 0){%>
+    <h1>Результаты теста на совместимость</h1>
+    <%results.forEach((item, i)=>{%>
+      <%if(results[i] != 1){%>
+      <p><%=results[i]%></p><%}%>
+    <%})%>
+  <%}%>
+
+  <h1>Выбранные комплектующие</h1>
+  <p>Материнская плата: <%=dat[0].models[b.MB].name%></p>
+  <p>Процессор: <%=dat[1].models[b.CPU].name%></p>
+  <p>ОЗУ: <%=dat[2].models[b.RAM].name%></p>
+  <p>Видеокарта: <%=dat[3].models[b.GC].name%></p>
+  <p>Кулер: <%=dat[4].models[b.COOL].name%></p>
+  <%if (b.HDD != -1){%>
+    <p>HDD: <%=dat[5].models[b.HDD].name%></p>
+  <%}%>
+  <%if (b.SSDS != -1){%>
+    <p>SSD: <%=dat[6].models[b.SSDS].name%></p>
+  <%}%>
+  <p>Корпус: <%=dat[7].models[b.CASE].name%></p>
+  <p>Блок питания: <%=dat[8].models[b.PU].name%></p>
+</body>
+</html>
