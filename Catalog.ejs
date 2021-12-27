@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form</title>
+  <link rel="shortcut icon" href="data/icon.ico"/>
+  <style>
+  p {
+   font-size:14px;
+  }
+  hr {
+    color: black;
+  }
+  input {
+   font-size:24px;
+  }
+  select {
+    width: 500px; /* Ширина списка в пикселах */
+    height: 75px;
+  }
+  body
+  {
+    background: #c7b39b url(data/BG.jpg); /* Цвет фона и путь к файлу */
+  }
+  .topnav { /*Верхняя панель*/
+  overflow: hidden;
+  background-color: #333;
+  }
+
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+  .con {
+    width: 500px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 4px;
+  }
+  .flex-container{
+    display: flex;
+    flex-direction: column;
+  }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <a href="/">Главная страница</a>
+    <a href="#">Проверка совместимости</a>
+    <a class="active"href="#">Характеристика комплектующих</a>
+    <a href="#">О проекте</a>
+  </header>
+    <aside class="flex-container">
+    <form name="Choose" method="post">
+      <input type="radio" name="value" value="0">Материнская плата</input>
+      <input type="radio" name="value" value="1">Процессор</input>
+      <input type="radio" name="value" value="2">Оперативная память</input>
+      <input type="radio" name="value" value="3">Видеокарта</input>
+      <input type="radio" name="value" value="4">Кулер</input>
+      <input type="radio" name="value" value="5">HDD</input>
+      <input type="radio" name="value" value="6">SSD</input>
+      <input type="radio" name="value" value="7">Корпус</input>
+      <input type="radio" name="value" value="8">Блок питания</input>
+      <input type="submit" onсlick="location.reload(); return false;"value="Применить">
+  </form>
+</aside>
+<center>
+  <main>
+    <%switch(body){
+      case '0':%>
+      <%dat[0].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/MBinfo/<%=i%>">Материнская плата: <%=dat[0].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[0].models[i].chipset%>, <%=dat[0].models[i].socket%>,
+            <%=dat[0].models[i].ram_slots%>x<%=dat[0].models[i].ram_type%>-<%=dat[0].models[i].max_ram_freq%> МГц</p>
+        </div>
+        <%});%>
+        <%break;
+      case '1':%>
+      <%dat[1].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/CPUinfo/<%=i%>">Процессор: <%=dat[1].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[1].models[i].socket%>, <%=dat[1].models[i].cores%>x<%=dat[1].models[i].frequency%>ГГц,
+            L1-<%=dat[1].models[i].casheL1%> МБ,L2-<%=dat[1].models[i].casheL2%> МБ
+          <%=dat[1].models[i].mem_type%>-<%=dat[1].models[i].max_mem_freq%> МГц, TDP-<%=dat[1].models[i].tdp%> Вт</p>
+        </div>
+        <%});%>
+        <%break;
+      case '2':%>
+      <%dat[2].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/RAMinfo/<%=i%>">ОЗУ: <%=dat[2].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[2].models[i].type%>, <%=dat[2].models[i].memory%> ГБ,
+            <%=dat[2].models[i].freq%> МГц,<%=dat[2].models[i].timings%></p>
+        </div>
+        <%});%>
+        <%break;
+      case '3':%>
+      <%dat[3].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/GCinfo/<%=i%>">Видеокарта: <%=dat[3].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[3].models[i].gmemory%> ГБ <%=dat[3].models[i].gmem_type%>,
+            <%=dat[3].models[i].membus%></p>
+        </div>
+        <%});%>
+        <%break;
+      case '4':%>
+      <%dat[4].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/COOLinfo/<%=i%>">Кулер: <%=dat[4].models[i].name%></a></p>
+          <hr>
+          <p>Рассеивающая мощность-<%=dat[4].models[i].power_dissipation%> Вт</p>
+        </div>
+        <%});%>
+        <%break;
+      case '5':%>
+      <%dat[5].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/HDDinfo/<%=i%>">HDD: <%=dat[5].models[i].name%></a></p>
+          <hr>
+          <p>HDD-<%=dat[5].models[i].size%>, <%=dat[5].models[i].memory%>,
+           <%=dat[5].models[i].rpm%> об/мин, кэш память - <%=dat[5].models[i].cashe%></p>
+        </div>
+        <%});%>
+        <%break;
+      case '6':%>
+      <%dat[6].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/SSDinfo/<%=i%>">SSD: <%=dat[6].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[6].models[i].memory%>, чтение-<%=dat[6].models[i].reading%>,
+           запись-<%=dat[6].models[i].recording%></p>
+        </div>
+        <%});%>
+        <%break;
+      case '7':%>
+      <%dat[7].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/CASEinfo/<%=i%>">Корпус: <%=dat[7].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[7].models[i].case_type%>, <%=dat[7].models[i].formfact%></p>
+        </div>
+        <%});%>
+        <%break;
+      case '8':%>
+      <%dat[8].models.forEach((item, i)=>{%>
+        <div class="con">
+          <p><a href="/PUinfo/<%=i%>">Блок пиания: <%=dat[8].models[i].name%></a></p>
+          <hr>
+          <p><%=dat[8].models[i].power%> Вт</p>
+        </div>
+        <%});%>
+        <%break;
+      }%>
+  </main>
+  </center>
+</body>
+</html>
