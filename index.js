@@ -45,8 +45,6 @@ module.exports = {
       if (str2 != "") return str2;
     }
   },
-  m2 : function(m2, m) {
-  },
   case : function (m,c) {
     if(con.catalog[8].models[c].formfact != con.catalog[0].models[m].formfact)
     console.log('Корпус и материнская плата несовместимы');
